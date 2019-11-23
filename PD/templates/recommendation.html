@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% if hasil %}
+<!doctype html>
+<head>
+  
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='For-Pages.css')}}">
+
+</head>
+<body>
+<div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <h4>Your Recommendation Is : </h4>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        {%  for item in frame_rec.columns%}
+                            <th>{{item}}</th>
+                        {%  endfor  %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for index,item in frame_rec.iterrows() %}
+                        <tr>
+                            {% for col in item %}
+                                <td>{{col}}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+{% else %}
+<!doctype html>
+<head>
+  
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='For-Pages.css')}}">
+
+</head>
+<body>
+<div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <form action="/recommendation" method="POST" required>
+                    <h1>Get Your Recommendation Here !</h1>
+                    
+                    <input type="text" name="Recomm1"
+                    placeholder="Please Input The Type of Assets.." class="form-control mt-3" required>
+
+                    <input type="number" min = 1 max = 10 name="Recomm2"
+                    placeholder="Please Input How Many Recommendation ( 1-10 ) " class="form-control mt-3" required>
+
+                    <button type="submit" class="btn btn-dark mt-3" >Recommendation</button>
+                </form>
+            </div>
+        </div>
+</div>
+</body>
+</body>
+</html>
+
+{% endif %}
+
+
+
+{% endblock body %}  

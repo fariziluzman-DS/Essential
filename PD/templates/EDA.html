@@ -1,0 +1,188 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!doctype html>
+<head>
+  
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='For-Pages.css')}}">
+
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>{{judul}}</h4>
+        </div>
+        <div class="col-md-12">
+            <div class="chart" id='EDA_Type1'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation example mt-5 mb-5">
+        <ul class="pagination">
+          <!-- <li class="page-item"><a class="page-link" style="color: black;" href="#">Previous</a></li> -->
+          <!-- <li class="page-item active"><a class="page-link"  style="color: black;" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" style="color: black;" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" style="color: black;" href="#">3</a></li> -->
+          <!-- <li class="page-item"><a class="page-link" style="color: black;" href="#">Next</a></li> -->
+        </ul>
+      </nav>
+</div>
+</body>
+</html>
+
+<!-- <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Comparison Between Maximum Nights and Minimum Nights </h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type2'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Insight of Bedtype on Melbourne Airbnb Assets</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type3'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Comparison Between Melbourne Airbnb Asset Types</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type4'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Insight of Melbourne Airbnb Assert with Highest Prices</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type5'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Simple Animation of Melbourne Airbnb Assets Development</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type6'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Important Words for Superb Class</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type7'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Important Words for Good Class</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type8'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Important Words for Average Class</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type9'>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Important Words for Poor Class</h4>
+        </div>
+        <div class="col-md-10">
+            <div class="chart" id='EDA_Type10'>
+            </div>
+        </div> 
+    </div>
+</div> -->
+    <script>
+        var page = [1,2,3,4,5,6,7,8,9,10]
+        var output = ''
+        var defaultPage = {{page}}
+        for(var i = 1 ;i <= page.length;i++){
+            if(i==defaultPage){
+                output += `<li class="page-item active"><a class="page-link" style="color: black;" href="/EDA/${i}">${i}</a></li>`
+            }
+            else{
+                output += `<li class="page-item"><a class="page-link" style="color: black;" href="/EDA/${i}">${i}</a></li>`
+            }
+        }
+        document.getElementsByClassName('pagination')[0].innerHTML = output
+
+        var EDA_Type1 = {{data1 | safe}}
+        Plotly.plot('EDA_Type1' , EDA_Type1 , {})
+    </script>
+     <!-- <script>
+        var EDA_Type2 = {{data2 | safe}}
+        Plotly.plot('EDA_Type2' , EDA_Type2 , {})
+    </script>
+    <script>
+        var EDA_Type3 = {{data3 | safe}}
+        Plotly.plot('EDA_Type3' , EDA_Type3 , {})
+    </script>
+    <script>
+        var EDA_Type4 = {{data4 | safe}}
+        Plotly.plot('EDA_Type4' , EDA_Type4 , {})
+    </script>
+    <script>
+        var EDA_Type5 = {{data5 | safe}}
+        Plotly.plot('EDA_Type5' , EDA_Type5 , {})
+    </script>
+    <script>
+        var EDA_Type6 = {{data6 | safe}}
+        Plotly.plot('EDA_Type6' , EDA_Type6 , {})
+    </script>
+    <script>
+        var EDA_Type7 = {{data7 | safe}}
+        Plotly.plot('EDA_Type7' , EDA_Type7 , {})
+    </script>
+    <script>
+        var EDA_Type8 = {{data8 | safe}}
+        Plotly.plot('EDA_Type8' , EDA_Type8 , {})
+    </script>
+    <script>
+        var EDA_Type9 = {{data9 | safe}}
+        Plotly.plot('EDA_Type9' , EDA_Type9 , {})
+    </script>
+    <script>
+        var EDA_Type10 = {{data10 | safe}}
+        Plotly.plot('EDA_Type10' , EDA_Type10 , {})
+    </script> -->
+{% endblock body %}

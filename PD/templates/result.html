@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!doctype html>
+<head>
+  
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='For-Pages.css')}}">
+
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>Your Prediction result is = {{hasil_pred}}</h4>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    {%  for item in rec_pred.columns%}
+                        <th>{{item}}</th>
+                    {%  endfor  %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for index,item in rec_pred.iterrows() %}
+                    <tr>
+                        {% for col in item %}
+                            <td>{{col}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation example mt-5 mb-5">
+                <ul class="pagination">
+                <!-- <li class="page-item"><a class="page-link" style="color: black;" href="#">Previous</a></li> -->
+                <!-- <li class="page-item active"><a class="page-link"  style="color: black;" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" style="color: black;" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" style="color: black;" href="#">3</a></li> -->
+                <!-- <li class="page-item"><a class="page-link" style="color: black;" href="#">Next</a></li> -->
+                </ul>
+            </nav>
+    </div>   
+</div>
+</body>
+</html>
+<script>
+        var url = new URLSearchParams(location.search)
+        var index_hasil =  url.getAll('index_hasil')
+        index_hasil = index_hasil.length > 0 ? index_hasil : 0
+        console.log(index_hasil)
+        var page = [1,2]
+        var output = ''
+        var defaultPage = {{page}}
+        var hasil = {{hasil_pred}} 
+        hasil = hasil == undefined ? 0 : hasil
+        var link_default =`/result?hasil=${hasil}`
+        if(index_hasil.length > 0){
+            for(var i = 0 ; i < index_hasil.length ; i++){
+                link_default += '&index_hasil=' + index_hasil[i]
+            }
+        }
+
+        for(var i = 1 ;i <= page.length;i++){
+            if(i==defaultPage){
+                output += `<li class="page-item active"><a class="page-link" style="color: black;" href="${link_default + '&page=' + i}">${i}</a></li>`
+            }
+            else{
+                output += `<li class="page-item"><a class="page-link" style="color: black;" href="${link_default + '&page=' + i}">${i}</a></li>`
+            }
+        }
+        document.getElementsByClassName('pagination')[0].innerHTML = output
+
+       
+    </script>
+
+
+{% endblock body %}   
+
+

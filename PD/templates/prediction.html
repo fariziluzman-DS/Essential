@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!doctype html>
+<head>
+  
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='For-Pages.css')}}">
+
+</head>
+<body>
+<div class="container pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h4>PREDICT HERE</h4>
+            <!-- Location Input -->
+            
+            <form action="/" method="POST" required>
+
+                <select class="form-control" name="City" id="" required>
+                    <option value="" disabled selected>Select Your City </option>
+                    {% for item in data_all %}
+                        <option value='{{item}}'>{{item}}</option>
+                    {% endfor %}
+                </select>
+
+                 <!-- Property Type -->
+                 <select class="form-control mt-3" name="Property Type Group" id="property" requuired>
+                    <option value="" disabled selected > Select Property Type </option>
+                    {% for item in prop_all %}
+                    <option value="{{item}}">{{item}}</option>                    
+                    {% endfor %}
+                </select>
+
+                <!-- Room Type -->
+                <select class="form-control mt-3" name="Room Type Group" id="room" required>
+                    <option value="" disabled selected > Select Room Type </option>
+                    {% for item in room_all %}
+                    <option value="{{item}}">{{item}}</option>                    
+                    {% endfor %}
+                </select>
+
+                <!-- Bed Type -->
+                <select class="form-control mt-3" name="Bed Type Group" id="bed" required>
+                    <option value="" disabled selected > Select Bed Type </option>
+                    {% for item in bed_all %}
+                    <option value="{{item}}">{{item}}</option>                    
+                    {% endfor %}
+                </select>
+                
+                <!-- Accomodates Input -->
+                <input type="number" min = '0' max='15' name="accommodates"
+                    placeholder="Number of Accomodates" class="form-control mt-3" required>
+
+                 <!-- Bedroom Input -->
+                 <input type="number" min = '0' max='8' name="bedrooms"
+                 placeholder="Number of Bedrooms" class="form-control mt-3" required>
+                
+                <!-- Bathroom Input -->
+                <input type="number" min = '0' max='7' name="bathrooms"
+                    placeholder="Number of Bathrooms" class="form-control mt-3" required>
+
+                <!-- min_nights Input -->
+                <input type="number" min = '1' max='1125' name="minimum_nights"
+                    placeholder="Number of Minimum Nights" class="form-control mt-3" required>
+                
+                <!-- max_nights Input -->
+                <input type="number" min = '1' max='1225' name="maximum_nights"
+                    placeholder="Number of Maximum Nights" class="form-control mt-3" required>
+                   
+                <button type="submit" class="btn btn-dark mt-3" >Predict</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock body %}     
