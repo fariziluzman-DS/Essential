@@ -123,4 +123,4 @@ def geojson():
     return map_melbourne._repr_html_()
 
 if __name__ == '__main__':
-    app.run(debug=True,port = 5960)
+    app.run(debug=True)
