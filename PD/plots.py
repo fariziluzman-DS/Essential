@@ -92,13 +92,14 @@ def EDA_Type6():
     return fig6_json
 
 def EDA_Type7(x):
+    sw = stopwords.words("english")
     all_words = ' '.join(list(x))
     list_all_words = all_words.split()
     word_count = Counter(list_all_words)
     word_count_series = pd.Series(word_count)
     word_stopwords = []
     for item in word_count_series.index:
-        if(item not in stopwords.words('english')):
+        if(item not in sw):
             word_stopwords.append(item)
     word_count_series = word_count_series.loc[word_stopwords]
     most_appeared_word = word_count_series.sort_values(ascending = False).head(20)
