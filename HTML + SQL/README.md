@@ -1,6 +1,6 @@
 # HTML + SQL
 
-My HTML + SQL folder, it consists basic templates and sql filtering, for training purposes only
+My HTML + SQL folder, it consists basic templates and sql filtering, for training purpose only
 
 ### A little bit of my work
 
