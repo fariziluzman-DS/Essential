@@ -6,4 +6,4 @@ My flask folder, build from the scratch all by myself, for training purposes onl
 
 Here is from my Tokyo flask
 
-![Tokyo](/Images/Tokyo.png)
+![Tokyo](/Images/Tokyo.png?raw=true)
