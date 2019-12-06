@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0px
+            }
+            div{
+                /* border: 1px solid red */
+            }
+            .container-flex{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+            }
+            .header{
+                flex: 1;
+                background-color: grey
+            }
+            .content{
+                flex: 6;
+                display: flex
+            }
+            .footer{
+                flex: 1;
+                background-color: grey
+            }
+            .sidebar{
+                flex: 1;
+                background-color: lightgrey
+            }
+            .ini-content{
+                flex: 5
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-flex">
+            <div class="header">
+                Ini Header
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    ini Sidebar
+                </div>
+                <div class="ini-content">
+                    Ini Konten
+                </div>
+            </div>
+            <div class="footer">
+                Ini Footer
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+/* INI OUTSIDE */
+p{
+    color : orange;
+}
+
+table,tr,th,td{
+    border: 1px solid black;
+}

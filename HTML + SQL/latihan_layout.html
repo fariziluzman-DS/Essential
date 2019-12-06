@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        body{
+            /* padding: 0px; */
+            margin: 0px;
+        }
+        .kotak{
+            height: 300px;
+            border: 1px solid salmon;
+        }
+        .satu{
+            background-color: brown;
+            /* flex: 6 */
+        }
+        .dua{
+            background-color: blueviolet;
+            /* flex: 1 */
+        }
+        .container-flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* height: 100vh;  */
+            /* Viewport Height */
+        }
+    </style>
+    <body>
+        <!-- 
+            Flex ada dua element Penting
+            1. Parent / Container
+            2. Item / Children
+        -->
+        <!-- 
+            Properti** Buat Parent
+            Properti** Buat Child
+         -->
+        <div class="container-flex">
+            <div class="kotak satu">
+                Ini Kotak 1
+            </div>
+            <div class="kotak dua">
+                Ini Kotak 2
+            </div>
+        </div>
+    </body>
+</html>
