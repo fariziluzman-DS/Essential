@@ -1,4 +1,4 @@
-#Flask
+# Flask
 
 Here is my Flask folder, all built by myself from scratch, for training purposes only
 
