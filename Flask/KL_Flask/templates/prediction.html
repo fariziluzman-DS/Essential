@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class = 'container pt-5'>
+        <div class = 'row justify-content-center'>
+            <div class = 'col-md-6'>
+                <h4>PREDICT HERE</h4>
+                <select class = 'form-control' name='location' id = ''>
+                    <option value ='' class='disabled' disabled selected>Select Location</option>
+                    {% for item in nama_daerah %}
+                        <option value = '{{item}}'>{{item}}</option>
+                    {% endfor %}
+                </select>
+                <input type = 'number' max = '15' 
+                placeholder = 'number of rooms' class = 'form-control mt-3'>
+                <input type = 'number' max = '15' 
+                placeholder = 'number of bathrooms' class = 'form-control mt-3'>
+                <input type = 'number' max = '15' 
+                placeholder = 'Size' class = 'form-control mt-3'>
+                <select class = 'form-control mt-3' name = 'sizetype'>
+                    <option value = 'Size Type' disabled selected>Size Type</option>
+                    <option value = 'Built-Up'>Built-Up</option>
+                    <option value = 'Land Area'>Land Area</option>
+                </select>
+
+                <select class = 'form-control mt-3' name = 'Furnishing' id='furnishing'>
+                    <option value = 'Partly Furnished'>Partly Furnished</option>
+                    <option value = 'Fully Furnished'>Fully Furnished</option>
+                    <option value = 'Unfurnished'>Unfurnished</option>
+                </select>
+
+                <select class = 'form-control mt-3' name='property_type' id = ''>
+                        <option value ='' class='disabled' disabled selected>Select Property</option>
+                        {% for item in nama_property %}
+                            <option value = '{{item}}'>{{item}}</option>
+                        {% endfor %}
+                </select>
+                <select>
+                    <button type = 'submit' class = 'btn btn dark mt-3'>Predict</button>
+                </select>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
