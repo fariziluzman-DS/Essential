@@ -14,10 +14,11 @@ Not needed, just filtering and some visualization
 
 Well, here you go, the filtered dataframe, contains top three of the happiest country for each year
 
-
+![h1](Images/h1.png)
 
 And some visualization
 
+![h2](Images/h2.png)
 
 
 ### Please tell us how to filter the dataset !
