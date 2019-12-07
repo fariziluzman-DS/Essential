@@ -14,7 +14,7 @@ Please read my notebook
 
 Simple Recommendation from Demographic Filtering
 
-![m1](Images/m1.png)
+![mx](Images/m1.png)
 
 Literal-Eval in action !
 
