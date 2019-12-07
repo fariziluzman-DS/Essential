@@ -77,7 +77,7 @@ My Words Processing for every class of asset
 
 ### Cool ! I want to try it myself !
 
-Be my guest, I already deployed it to the internet, all you have to do just scan this QR code
+Be my guest, I already deployed it to the internet, all you have to do is just scan this QR code
 
 ![F9](Images/project.png)
 
