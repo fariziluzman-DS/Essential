@@ -23,7 +23,7 @@ def mean_all(x):
     vara = x.fillna(x.mean())
     return vara
 ```
-2. ##If the missing value is above 10 % ( my standard ), I'm using correlation method 
+2. If the missing value is above 10 % ( my standard ), I'm using correlation method 
 
 ```python
 # Membuat df2_test_province yang merupakan data yang provinsi, Lat, dan Long nya tidak null
@@ -47,6 +47,45 @@ def fill_state(df):
 Please read my notebook, I explain it very clear in there
 
 ### A little bit of my work
+
+My Jupyter Notebook, looking for best parameter in Random Forest Regressor
+![F0](Images/Flask-0.png)
+
+My Flask interface
+![F1](Images/Flask-1.png)
+
+My Price prediction result
+![F2](Images/Flask-2.png)
+
+My Price prediction margin
+![F3](Images/Flask-3.png)
+
+My Recommendation model interface
+![F4](Images/Flask-4.png)
+
+My Recommendation model result
+![F5](Images/Flask-5.png)
+
+My Data visualization
+![F6](Images/Flask-6.png)
+
+My Assets heatmap
+![F7](Images/Flask-7.png)
+
+My Words Processing for every class of asset
+![F8](Images/Flask-8.png)
+
+### Cool ! I want to try it myself !
+
+Be my guest, I already deployed it to the internet, all you have to do just scan this QR code
+
+![F9](Images/project.png)
+
+
+
+
+
+
 
 
 
