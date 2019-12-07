@@ -12,5 +12,5 @@ All of the folders except above
 
 ### Want to get in touch ?
 
-### Just email me -> surel.luzmano@gmail.com
+### Just email me -> amadeus009@icloud.com
 
