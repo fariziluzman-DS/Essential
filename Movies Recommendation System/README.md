@@ -12,11 +12,6 @@ Please read my notebook
 
 ### A little bit of my work
 
-Simple Recommendation from Demographic Filtering
-
-![mx](Images/m1.png)
-
-Literal-Eval in action !
 
 ![m2](Images/m2.png)
 
