@@ -10,7 +10,7 @@ From my mentor
 
 Not needed, just filtering and some visualization
 
-### a little bit of my work
+### A little bit of my work
 
 Well, here you go, the filtered dataframe, contains top three of the happiest country for each year
 
