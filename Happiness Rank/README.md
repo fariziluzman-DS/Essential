@@ -6,7 +6,7 @@ This dataset consist of 3 CSV, each of them contain information about happiness 
 
 From my mentor
 
-### Do you need modelling for this case ?
+### Do you need modeling for this case ?
 
 Not needed, just filtering and some visualization
 
