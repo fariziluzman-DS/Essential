@@ -40,6 +40,6 @@ Please read the notebook, i am using all of the possibility ( SMOTE, ROS, Unders
 
 Sure, here you go, the complete random forest classification tree, to recognize which user that has fraud loan or not
 
-
+![Tree](Images/Tree.png)
 
 
