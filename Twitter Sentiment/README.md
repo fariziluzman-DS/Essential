@@ -1,6 +1,6 @@
 # Twitter Sentiment
 
-This dataset contains some information scraped from indonesian netizen on twitter, we train the model to predict the sentiment basis on the dataset
+This dataset contains some information scraped from indonesian netizen on twitter, i train the model to predict the sentiment based on the dataset
 
 ### Data Source
 
@@ -12,4 +12,4 @@ Please read my notebook
 
 ### A little bit of my work
 
-![tw](Images/tw.png)
+![tw](Images/TW.png)
