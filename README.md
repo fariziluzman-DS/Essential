@@ -10,7 +10,7 @@ Data Prep, Python Fundamental, Flask & HTML + SQL
 
 All of the folders except above
 
-### From where do you get tghe data sources ?
+### From where do you get the data ?
 
 My Mentor and KAGGLE
 
