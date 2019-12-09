@@ -10,6 +10,10 @@ Data Prep, Python Fundamental, Flask & HTML + SQL
 
 All of the folders except above
 
+### From where do you get tghe data sources ?
+
+My Mentor and KAGGLE
+
 ### Want to get in touch ?
 
 ### Just email me -> amadeus009@icloud.com
