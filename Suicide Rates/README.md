@@ -8,9 +8,9 @@ https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
 
 ### Do you need modeling for this case ?
 
-Nah, just a simple visualizatio and a filtering on dataframe
+Nah, just a simple visualization and a filtering on dataframe
 
-### How do yandle the filtering ?
+### How do handle the filtering ?
 
 Please read my notebook
 
